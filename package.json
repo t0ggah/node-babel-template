@@ -1,0 +1,40 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn build:live",
+    "start:application": "node lib/index.js",
+    "build": "babel src --out-dir lib",
+    "build:live": "nodemon --watch src --exec babel src --out-dir lib -- ./lib/index.js",
+    "test": "jest --watch",
+    "test:one": "jest",
+    "flow": "flow",
+    "lint": "eslint src __tests__ --ext js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.34",
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
+    "@babel/preset-flow": "^7.0.0-beta.34",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^21.2.0",
+    "eslint": "^4.12.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "flow-bin": "^0.60.1",
+    "jest": "^21.2.1",
+    "prettier": "^1.9.1"
+  },
+  "dependencies": {
+    "mongoose": "^4.13.6"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": ["prettier", "eslint:recommended"],
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "flowtype"],
+  "rules": {
+    "prettier/prettier": "error",
+    "flowtype/require-valid-file-annotation": [
+      2,
+      "always"
+    ]
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  }
+}
