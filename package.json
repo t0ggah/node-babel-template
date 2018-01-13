@@ -34,7 +34,5 @@
     "jest": "^21.2.1",
     "prettier": "^1.9.1"
   },
-  "dependencies": {
-    "mongoose": "^4.13.6"
-  }
+  "dependencies": {}
 }
